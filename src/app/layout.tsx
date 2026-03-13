@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
 import Link from "next/link";
+import { FetchButton } from "@/components/fetch-button";
 import "./globals.css";
 
 const inter = Inter({
@@ -41,6 +42,7 @@ function Nav() {
           >
             Keywords
           </Link>
+          <FetchButton />
         </div>
       </div>
     </nav>
