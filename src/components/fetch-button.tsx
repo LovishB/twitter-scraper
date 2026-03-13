@@ -15,8 +15,8 @@ export function FetchButton() {
       if (data.message) {
         toast(data.message);
       } else {
-        toast(`Fetched ${data.fetched} tweets, ${data.selected ?? 0} selected`);
-        window.location.reload();
+        toast.success(`${data.selected ?? 0} new tweets found`);
+        setTimeout(() => window.location.reload(), 1500);
       }
     } catch (err) {
       toast.error(err instanceof Error ? err.message : "Fetch failed");
